@@ -12,7 +12,10 @@ class TaskList extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {this.props.tasks.map((task, index) => <TaskItem key={index} taskItem={task} id={index}/>)}
+                {this.props.tasks.map((task, index) =>
+                    <TaskItem key={index} taskItem={task} id={index}
+                              deleteTask={(e) => this.props.deleteTask(e, index)}/>)
+                }
                 </tbody>
             </table>
         );

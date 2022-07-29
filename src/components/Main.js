@@ -28,10 +28,14 @@ class Main extends Component {
                 <div>
                     <CreateTask createTaskForTodo={this.createTask}/>
                     <br/>
-                    <TaskList tasks={this.state.tasks}/>
+                    <TaskList tasks={this.state.tasks} deleteTask={(e, index) => this.deleteTask(e, index)}/>
                 </div>
             </div>
         );
+    }
+
+    deleteTask = (e, index) => {
+        this.setState({tasks: this.state.tasks.filter((val, i) => i !== index)})
     }
 }
 

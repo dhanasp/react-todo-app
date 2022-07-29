@@ -11,7 +11,7 @@ class TaskItem extends Component {
                 <td>{this.props.taskItem.task}</td>
                 <td>
                     <button>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={this.props.deleteTask}>Delete</button>
                 </td>
             </tr>
         );
