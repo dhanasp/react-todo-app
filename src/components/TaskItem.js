@@ -11,10 +11,14 @@ class TaskItem extends Component {
                 <td>{this.props.taskItem.task}</td>
                 <td>
                     <button>Edit</button>
-                    <button onClick={this.props.deleteTask}>Delete</button>
+                    <button onClick={this.deleteTask}>Delete</button>
                 </td>
             </tr>
         );
+    }
+
+    deleteTask = () => {
+        this.props.deleteTask(this.props.id)
     }
 }
 
