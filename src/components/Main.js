@@ -28,7 +28,7 @@ class Main extends Component {
                 <div>
                     <CreateTask createTaskForTodo={this.createTask}/>
                     <br/>
-                    <TaskList/>
+                    <TaskList tasks={this.state.tasks}/>
                 </div>
             </div>
         );
